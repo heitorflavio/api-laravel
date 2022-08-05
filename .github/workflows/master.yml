@@ -12,6 +12,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp://185.211.7.190
-          port: 21
+          # port: 21
           username: u273534365.figures3d.com.br
           password: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCt9AeCSsqq9rNrKJDeR6H6eM4A2AhXedRmqqIFFUjkxVQbe9n7TWXApR0xGDAagUZ0DBbfzpJK4RWVgtL4Xd6rzdXC/aeQXwHoytOdXgy5A9UF3Z1H/mK1StGe2rGQUcMDEtNTl4CHqrl5FZ6n/YyznkntXcV89UY8wfBgkGfKce/5NYO6Wc/7gUxgF8ePIf0YwKAUyWrqaSK7AkjPRMKOns96yuhe8y967NKiAiLim9sAh9C67G569adDxO9/MGqFk8ZSbli20rR8WEBV6Hza+k6atDMqqewWGapGSu2qSuP4R74OUSOk6YeW5SIsV9V+j1R5hC4XmJhWuP0lWwGL u273534365@br-asc-web718.main-hosting.eu
