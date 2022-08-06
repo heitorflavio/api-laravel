@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreprodutosRequest;
 use App\Http\Requests\UpdateprodutosRequest;
+use Illuminate\Http\Request;
 use App\Models\produtos;
 
 class ProdutosController extends Controller
@@ -21,11 +22,24 @@ class ProdutosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $produtos = $this->produtosModel->all();
+        // dd($request->query);
+        $query= $request->query();
+        // print_r(array_keys($query));
+        // print_r(array_key_exists('categoria',$query));
+        // $query = array_keys($query);
+        if(array_key_exists('categoria',$query)){
+            $produtos = $this->produtosModel->where('categoria',$query['categoria'])->get();
+        }else{
+            
+            $produtos = $this->produtosModel->all();
+        }
+        
         return response()->json($produtos);
+
+
     }
 
     /**
